@@ -18,7 +18,7 @@ export default function AdminPage(){
         e.preventDefault()
 
         try {
-            const response = await fetch("http://localhost:3001/produtos", {
+            const response = await fetch(`${process.env.API_URL}/produtos`, {
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
