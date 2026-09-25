@@ -19,7 +19,7 @@ export default function CardapioPage() {
 
   async function mostrarProdutos() {
     try {
-      const response = await fetch(`${process.env.API_URL}/produtos`)
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/produtos`)
 
       if (!response.ok) {
         throw new Error("Erro ao buscar produtos")
