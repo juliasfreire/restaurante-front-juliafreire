@@ -12,7 +12,7 @@ export default function Login(){
     const [senha,setSenha] = useState("")
 
     function entrar(){
-        if(usuario === "admin" && "julinha"){
+        if(usuario === "admin" && "123456"){
             localStorage.setItem("admin_logado","true")
 
             router.push("/admin")

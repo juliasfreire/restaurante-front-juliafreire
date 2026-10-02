@@ -8,8 +8,8 @@ export default function Navbar(){
         <header className="w-full bg-[#462824] border-b shadow-sm opacity-95">
             <nav className="max-w-7xl mx-auto py-4 flex items-center justify-between">
                 <Link href="/" 
-                className="flex items-center gap-2 text-2xl font-bold text-white font-serif">
-                    Restaurante
+                className="flex items-center gap-2 text-2xl font-bold text-white font-serif mx-0">
+                    🍒 Red Cherry Bistro
                 </Link>
 
                 <div className="flex items-center gap-8">

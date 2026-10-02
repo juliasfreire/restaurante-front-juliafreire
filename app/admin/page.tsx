@@ -1,7 +1,7 @@
 "use client"
 
 import Navbar from "@/components/Navbar"
-import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 export default function AdminPage(){
@@ -46,7 +46,7 @@ export default function AdminPage(){
             <Navbar />
             <main className="min-h-screen bg-gray-100 p-8">
                 <div className="mx-auto max-w-xl rounded-lg bg-white p-8 shadow">
-                    <h1 className="mb-6 text-3xl font-bold font-serif text-red-950">Cadastrar Lanche</h1>
+                    <h1 className="mb-6 text-3xl font-bold font-serif text-red-950 text-center">Cadastrar Lanche</h1>
                     <form onSubmit={cadastrarLanche} className="space-y-5">
 
                         <div>
@@ -55,7 +55,7 @@ export default function AdminPage(){
                             value={descricao}
                             onChange={(e)=> setDescricao(e.target.value)}
                             placeholder="Ex: X-Bacon de salada com carne"
-                            className="w-full rounded border p-3"
+                            className="w-full rounded border p-3 transition focus:border-red-800 focus:ring-2 outline-none focus:ring-red-400"
                             />
                         </div>
 
@@ -65,7 +65,7 @@ export default function AdminPage(){
                             value={categoria}
                             onChange={(e)=> setCategoria(e.target.value)}
                             placeholder="Ex: Hambúguer"
-                            className="w-full rounded border p-3"
+                            className="w-full rounded border p-3 transition focus:border-red-800 focus:ring-2 outline-none focus:ring-red-400"
                             />
                         </div>
 
@@ -75,7 +75,7 @@ export default function AdminPage(){
                             value={preco}
                             onChange={(e)=> setPreco(e.target.value)}
                             placeholder="Ex: 10.00"
-                            className="w-full rounded border p-3"
+                            className="w-full rounded border p-3 transition focus:border-red-800 focus:ring-2 outline-none focus:ring-red-400" 
                             />
                         </div>
 
@@ -86,16 +86,24 @@ export default function AdminPage(){
                             value={imagem}
                             onChange={(e)=> setImagem(e.target.value)}
                             placeholder="Insira o link da imagem"
-                            className="w-full rounded border p-3"
+                            className="w-full rounded border p-3 transition focus:border-red-800 focus:ring-2 outline-none focus:ring-red-400"
                             />
                         </div>
 
+                        
+
                         <button
                         type="submit"
-                        onClick={cadastrarLanche}
                         className="w-full rounded bg-red-950 py-3 font-semibold text-white font-serif hover:bg-[#641105] cursor-pointer">
                             Cadastrar Lanche
                         </button>
+                        
+                        <div className="text-center">
+                            <Link href="/admin/cardapio" className="text-lg font-medium text-red-800 hover:text-red-700 hover:underline transition-colors">
+                            → Ver Cardápio Admin
+                            </Link>
+                        </div>
+
                     </form>
                 
                 
